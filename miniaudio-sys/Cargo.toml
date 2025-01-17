@@ -27,7 +27,7 @@ include = [
 [lib]
 name = "miniaudio_sys"
 path = "src/lib.rs"
-crate_type = ["lib"]
+crate-type = ["lib"]
 
 [features]
 default = ["ma-log-level-error", "bindgen"]

@@ -103,7 +103,6 @@ fn generate_bindings() {
         // We just use one big generated header created by concatenating what we need.
         .header(header)
         .size_t_is_usize(true)
-        .rustfmt_bindings(true)
         .layout_tests(true)
         .derive_copy(true)
         .impl_debug(true)
@@ -243,7 +242,7 @@ fn apply_flags(b: &mut cc::Build) {
         b.flag_if_supported("-mavx2");
     }
 
-    if cfg!(target_feature = "avx512") && !(cfg!(feature = "ma-no-avx512")) {
+    if cfg!(target_feature = "avx512f") && !(cfg!(feature = "ma-no-avx512")) {
         b.flag_if_supported("-mavx512");
     }
 
