@@ -105,6 +105,7 @@ fn generate_bindings() {
         .size_t_is_usize(true)
         .layout_tests(true)
         .derive_copy(true)
+        .derive_default(true)
         .impl_debug(true)
         .prepend_enum_name(false)
         .rust_target(bindgen::RustTarget::Stable_1_36)
